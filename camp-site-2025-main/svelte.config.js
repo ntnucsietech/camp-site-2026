@@ -14,14 +14,14 @@ const config = {
 				builder.mkdirp = (dir) => {
 					originalMkdirp(dir);
 					if (dir.endsWith('cloudflare')) {
-						originalMkdirp(dir + '/2025');
+						originalMkdirp(dir + '/2026');
 					}
 				};
 				await delegate.adapt(builder);
 			}
 		},
 		paths: {
-			base: '/2025'
+			base: '/2026'
 		}
 	}
 };

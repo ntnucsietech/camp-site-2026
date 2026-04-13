@@ -96,7 +96,7 @@ const days = [
             { time: '12:00–13:00', tag: '', tagClass: '', title: '午餐時間', desc: '', detail: '' },
             { time: '13:20–15:30', tag: '下午', tagClass: 'tag-afternoon', title: '黑客松報告', desc: '', detail: '各組上台發表成果，評審打分環節。' },
             { time: '15:30–17:20', tag: '下午', tagClass: 'tag-afternoon', title: '黑客松頒獎+ 大合照 + 閉幕', desc: '', detail: '根據我們設定的各評分標準頒發獎項，最後進行大合照與閉幕典禮。' },
-            { time: '「艾瑪史東」', tag: '', tagClass: 'tag-evening', title: '<img src="/images/others/stone.PNG" alt="stone" class="stone-img">', desc: '', detail: '' },
+            { time: '「艾瑪史東」', tag: '', tagClass: 'tag-evening', title: '<img src="./images/others/stone.PNG" alt="stone" class="stone-img">', desc: '', detail: '' },
         ]
     },
 ];

@@ -1,0 +1,37 @@
+footer{
+    background-color: antiquewhite;
+    width:100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: wrap;
+    justify-content:center;
+    align-items: center;
+    gap:2rem;
+    padding:1rem;
+}
+.profile.png{
+    width: 4rem;
+    height: 4rem;
+}
+.contents .slogan{
+    display: flex;
+    flex-wrap: wrap;
+    gap:0 10px;
+}
+.contents a:hover{
+    color: aliceblue;
+}
+.Commu{
+    display: flex;
+    gap:1rem;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .Commu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -14,9 +14,11 @@ Build command:pnpm build
 
 Build output:.svelte-kit/cloudflare
 
+變數增加了一個 NODE_VERSION(Name) 20(Value)
+
 另外我的root有在Advance那邊調整過
 
-## 這邊放上hugo的指引
+## 這邊放上hugo的指引(神諭)
 
 目前還可考的 2023、2024、2025 資工營網頁已經全數完成整合部署
 也順手更新了一下 2025 的 RW:D

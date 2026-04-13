@@ -1,8 +1,8 @@
-name = "camp-site-2025"
+name = "camp-site-2026"
 type = "javascript"
 
 [env.production]
 routes = [
-  { pattern = "camp.ntnucsie.info/2025/*", zone_name = "camp.ntnucsie.info" },
-  { pattern = "*/2025/*" }
+  { pattern = "camp.ntnucsie.info/2026/*", zone_name = "camp.ntnucsie.info" },
+  { pattern = "*/2026/*" }
 ]

@@ -1,69 +1,40 @@
-# NTNU CSIE Camp Site 2025
+# 操作步驟與真正的檔案資料在上方的資料夾的README裡
 
-Welcome to the NTNU CSIE Camp Site project for 2025! This guide will help you get started quickly.
+開始做之前請詳細參閱2025年的code，不清楚就問AI或whyhugo
 
-## 🚀 Getting Started
+可以做成單純靜態網頁或框架(svelte)的形式，時間可能會差個5~6倍吧我猜，反正我是只做靜態但2025的比較完整。
 
-### Step 1: Set Up Your Environment
+資料夾外的檔案只有些要些微調整，那些大多是為了整合部署好放一起而必須的檔案。
 
-First, you'll need to set up your development environment:
+## Cloudflare連結GitHub
 
-1. **Install PNPM** (Package Manager):
+你要在Cloudflare上找到 Compute -> Worker&Pages -> Create Application，注意要點下方的Create Pages。
 
-   - Visit: <https://pnpm.io/installation>
-   - Follow the instructions for your operating system
+Build command:pnpm build
 
-2. **Install Node.js using PNPM**:
+Build output:.svelte-kit/cloudflare
 
-   ```bash
-   pnpm env use -g lts
-   ```
+另外我的root有在Advance那邊調整過
 
-3. **Install Project Dependencies**:
+## 這邊放上hugo的指引
 
-   ```bash
-   pnpm install
-   ```
+目前還可考的 2023、2024、2025 資工營網頁已經全數完成整合部署
+也順手更新了一下 2025 的 RW:D
 
-### Step 2: Development Workflow
+全數以 camp 子網域、/year 路徑方式部署於系學會 cloudflare：
 
-To start working on the project:
+https://camp.ntnucsie.info/2025/  https://github.com/CSIE-Camp/camp-site-2025
 
-1. **Launch the Development Server**:
+https://camp.ntnucsie.info/2024/  https://github.com/CSIE-Camp/Camp_website_2024
 
-   ```bash
-   pnpm dev
-   ```
+https://camp.ntnucsie.info/2023/  https://github.com/CSIE-Camp/website-frontend
 
-   This will start a local server, typically at <http://localhost:5173> (check your terminal for the exact URL)
+各網站獨立 repo 獨立 cloudflare pages，最後再透過 cloudflare workers 對使用者造訪的路徑分到對應 pages；https://camp.ntnucsie.info/ 目前會自動導向 2026 網站也是透過 系學會Cloudflare裡的workers 設定。
 
-2. **Make Changes**:
-   - The site will automatically update when you make changes to the code
-   - Check the terminal for any errors if something doesn't work
+/year 路徑部署方式是直接在各年度網頁專案中直接寫入，例如 base: "/2024"；開發環境 pnpm dev 測試時也有設置會自動導向 localhost:port/year。
 
-> Tip: Server-side errors and logs will be displayed in the **terminal**, while client-side errors will appear in the **browser console**. I've seen many people miss this, so be sure to check both!
+2027 網站可以依循相同邏輯來部署。
 
-## 🏗️ Building for Production
+# 好用的網頁開發工具
 
-When you're ready to create a production version:
-
-```bash
-pnpm build
-```
-
-This will generate optimized files in the `build` directory.
-
-## 💡 Need Help?
-
-If you encounter any issues or have questions:
-
-- Check the project's issue tracker for known problems
-- Refer to the documentation for the tools you're using
-  - [PNPM Documentation](https://pnpm.io/pnpm-cli)
-  - [Node.js Documentation](https://nodejs.org/en/docs/)
-  - [SvelteKit Documentation](https://kit.svelte.dev/docs)
-  - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-  - [Flowbite Svelte Documentation](https://flowbite-svelte.com/docs/pages/introduction)
-- Ask a team member or the mentor for guidance
-
-Happy coding! 🎉
+Figma, tailwind css

@@ -5,7 +5,7 @@ import fs from 'fs';
 
 export default defineConfig({
 	// 這裡設定 base 路徑，讓瀏覽器知道要去 /2026/ 找檔案
-	base: '/2025/', 
+	base: '/2026/', 
 	
 	plugins: [
 		tailwindcss(),
@@ -14,7 +14,7 @@ export default defineConfig({
 			name: 'fix-cloudflare-enoent',
 			closeBundle() {
 				// 將這裡的 2025 改成 2026
-				const dir = '.svelte-kit/cloudflare/2025';
+				const dir = '.svelte-kit/cloudflare/2026';
 				if (!fs.existsSync(dir)) {
 					fs.mkdirSync(dir, { recursive: true });
 				}

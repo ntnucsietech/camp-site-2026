@@ -205,6 +205,7 @@
 }
 
 .mobile-session {
+    background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
@@ -228,7 +229,7 @@
 }
 
 .mobile-session-title {
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin: 4px 0;
 }
@@ -341,5 +342,8 @@
     }
     .mobile-card {
         display: block;
+    }
+    #TimeTable {
+        padding: 2rem 3rem;
     }
 }

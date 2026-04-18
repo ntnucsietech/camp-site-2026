@@ -1,6 +1,6 @@
 # 本年度網頁是做靜態的，如要做架構請參考2025年版本
 
-如果想要掛在https://camp.ntnucsie.info這個網域下就請詳閱2025年的repository，不清楚就問AI或whyhugo
+如果想要掛在https://camp.ntnucsie.info 這個網域下就請詳閱2025年的repository，不清楚就問AI或whyhugo
 
 可以做成單純靜態網頁或框架(svelte)的形式，時間可能會差個5~6倍吧我猜，反正我是只做靜態但2025的比較完整。
 

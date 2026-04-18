@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 :root {
+    font-size: 14px;
     /* 主色系 */
     --color-primary: rgb(99, 107, 47);      /* 軍綠，主背景 */
     --color-primary-dark: rgb(70, 76, 33);  /* 深軍綠，區塊邊框 */
@@ -45,7 +46,7 @@ body {
     padding: 0;
     background-image: url("./images/others/background.PNG");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: repeat;
 }
 a{
@@ -71,5 +72,10 @@ a:hover{
 @media (max-width: 768px) {
     :root{
         font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    :root{
+        font-size: 10px;
     }
 }

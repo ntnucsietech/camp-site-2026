@@ -61,7 +61,7 @@ const days = [
         sessions: [
             { time: '09:00–12:00', tag: '早上', tagClass: 'tag-morning', title: '報到 + 破冰開幕', desc: '《走進 CS》講座', detail: '抵達活動地點後完成報到手續，接著進行破冰活動認識新朋友，並聆聽《走進 CS》講座了解資工領域。' },
             { time: '', tag: '', tagClass: '', title: '午餐時間', desc: '', detail: '' },
-            { time: '13:10–16:10', tag: '下午', tagClass: 'tag-afternoon', title: '主題課程一', desc: '製作自己的第一個網站 ——<br>用 HTML & CSS 完成個人名片', detail: '你有沒有發現' },
+            { time: '13:10–16:10', tag: '下午', tagClass: 'tag-afternoon', title: '主題課程一', desc: '製作自己的第一個網站 ——<br>用 HTML & CSS 完成個人名片', detail: '我們每天滑的網頁，究竟是怎麼做出來的？<br>你是否想過自己的簡歷能用網站來呈現？<br>若有上述問題，那你就來對地方了！<br>在這堂課程中，我們將帶你從 0 開始，一步步邁進前端的世界！💻✨<br><br>📌 課程內容<br>網頁是怎麼做出來的？—— HTML & CSS 的功能與作用<br>讓我們先從骨架開始 —— 學會 HTML 的各種標籤<br>打扮自己的網頁 —— 學習 CSS 選擇器、常用屬性與排版方式<br><br>🥸☝️ 這堂課中我們將學到<br>網頁是怎麼做出來的<br>實際操作怎麼寫網頁<br>做出自己的個人名片！！<br><br>不論你是完全沒接觸過，<br>還是想更了解網頁怎麼運作，<br>這堂課都能帶你進入前端的世界！🚀' },
             { time: '16:20–18:20', tag: '下午', tagClass: 'tag-afternoon', title: '大活動一', desc: '一起拯救原始馬吧', detail: '「一定要把原始馬救回來！」<br>很久很久以前，有一群人們跟隨著一匹「馬」來到了依山傍水的富饒之地，在豐潤的資源之下，「蔻町•安吉尼爾部落」就此創立。 部落創立之後，這隻馬還賦予了他們智慧，以及許多無法解釋的神蹟。 因此，這匹馬便成為了族人們的信仰，並尊稱他為「原始馬」<br>只不過，遠在邊疆的「獅子一族」早已貪圖人類的智慧許久，想盡辦法打聽任何人類壯大的消息。 這次，獅子一族終於抓到了機會，偷走了神聖的原始馬！ 身為部落精銳的你們，必須通過重重關卡提升實力，直到擁有匹敵獅子一族的實力，奪回信仰中的原始馬、拯救蔻町•安吉尼爾部落！' },
             { time: '', tag: '', tagClass: '', title: '晚餐時間', desc: '', detail: '' },
             { time: '19:40–22:10', tag: '晚上', tagClass: 'tag-evening', title: '黑客松Brain Storming', desc: '', detail: '這也許是你人生中的第一次參與黑客松，但別擔心!<br>我們會介紹本次黑客松的主題並介紹提供給各位的資源。因為大家還沒上到什麼課，所以今天分組完事集思廣益時間!' },
@@ -96,7 +96,7 @@ const days = [
             { time: '12:00–13:00', tag: '', tagClass: '', title: '午餐時間', desc: '', detail: '' },
             { time: '13:20–15:30', tag: '下午', tagClass: 'tag-afternoon', title: '黑客松報告', desc: '', detail: '各組上台發表成果，評審打分環節。' },
             { time: '15:30–17:20', tag: '下午', tagClass: 'tag-afternoon', title: '黑客松頒獎+ 大合照 + 閉幕', desc: '', detail: '根據我們設定的各評分標準頒發獎項，最後進行大合照與閉幕典禮。' },
-            { time: '「艾瑪史東」', tag: '', tagClass: 'tag-evening', title: '<img src="./images/others/stone.PNG" alt="stone" class="stone-img">', desc: '', detail: '' },
+            { time: '「艾瑪史東」', tag: '', tagClass: 'tag-evening', title: '<img src="/images/others/stone.PNG" alt="stone" class="stone-img">', desc: '', detail: '' },
         ]
     },
 ];
@@ -150,7 +150,7 @@ function renderDesktopTable() {
             const clickable = session.detail ? 'class="clickable-cell"' : '';
             
             return `<td ${clickable} data-day="${di}" data-time="${session.time}">
-                <div style="font-size: 0.85em; color: #888; margin-bottom: 4px;">${session.time}</div>
+                <div style="font-size: 0.9rem; color: #888; margin-bottom: 4px;">${session.time}</div>
                 ${session.tag ? `<span class="tag ${session.tagClass}">${session.tag}</span><br>` : ''}
                 <div style="font-weight: bold; margin-top: 2px;">${session.title}</div>
                 ${session.desc ? `<div style="font-size: 0.85em; color:#777; margin-top: 4px;">${session.desc}</div>` : ''}

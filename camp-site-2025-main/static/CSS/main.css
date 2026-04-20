@@ -269,7 +269,6 @@ svg{
 .course-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
 }
 /* 展開狀態 */
 .course-content.active {
@@ -279,7 +278,6 @@ svg{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: max-height 0.3s ease;
 }
 .course-content p{
     font-size: 1.1rem;
@@ -429,12 +427,16 @@ svg{
 }
 
 @media (max-width: 768px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
     main{
         padding:0rem;
     }
     .description{
         /* background-color: brown; */
         width: 100%;
+        padding: 0 1rem;
     }
     .description.columns{
         /* background-color:aqua; */

@@ -163,7 +163,7 @@
 }
 
 .detail-card-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -223,19 +223,24 @@
 }
 
 .mobile-session-time {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: #777;
     margin-bottom: 6px;
 }
 
 .mobile-session-title {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     font-weight: bold;
     margin: 4px 0;
 }
 
 .mobile-session-desc {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.mobile-session-detail {
+    font-size: 0.9rem;
     color: #555;
 }
 

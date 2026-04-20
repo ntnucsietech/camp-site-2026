@@ -159,8 +159,8 @@ section{
     padding:1rem 2rem;
     justify-content: center;
     align-items: center;
-    min-height: 400px;
-    margin-top: 1rem;;
+    /* min-height: 400px; */
+    margin-top: 1rem;
 }
 .columns{
     /* background-color: aquamarine; */
@@ -207,6 +207,14 @@ section{
 }
 .direction a{
     color: rgb(255, 171, 2);
+}
+.map{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.map-image{
+    width:70%;
 }
 
 #CourseInfo{
@@ -261,19 +269,21 @@ svg{
 .course-content {
     max-height: 0;
     overflow: hidden;
-    /* transition: max-height 0.3s ease; */
+    transition: max-height 0.3s ease;
 }
 /* 展開狀態 */
 .course-content.active {
-    max-height: 800px; /* 可以調整 */
+    max-height: 800px;
     width: 100%;
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: max-height 0.3s ease;
 }
 .course-content p{
     font-size: 1.1rem;
+    overflow: hidden;
 }
 .Hackathon{
     background-color: rgba(0, 0, 0,0.2);
@@ -419,9 +429,6 @@ svg{
 }
 
 @media (max-width: 768px) {
-    * {
-    -webkit-tap-highlight-color: transparent;
-    }
     main{
         padding:0rem;
     }
@@ -457,6 +464,9 @@ svg{
     }
     .Info{
     flex-direction: column;
+    }
+    .map-image{
+        width:100%;
     }
     #CourseInfo{
         padding: 0;

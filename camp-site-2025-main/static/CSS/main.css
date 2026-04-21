@@ -242,14 +242,13 @@ svg{
     fill:black;
     width: 1.1rem;
     height: 1.1rem;
-    transition: 0.2s ease ;
+    transition: transform 0.35s ease;
 }
 .right-svg.rotated{
     transform: rotate(90deg);
-    transition: 0.2s ease ;
 }
 .CIntro{
-    width: 32rem;
+    width: 33rem;
     background-color: var(--color-surface-dark);
     border: 2px solid var(--color-border);
     border-radius: 37px;
@@ -265,23 +264,35 @@ svg{
     cursor: pointer;
     font-weight: bold;
 }
-/* 內容區（預設收起） */
+/* 內容區（預設收起）—— 用 grid-template-rows 讓高度精準貼合內容，收合時不頓 */
 .course-content {
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    width: 100%;
+    padding: 0 2rem;
+    transition:
+        grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* 子元素必須設 min-height:0 與 overflow:hidden，grid 動畫才會乾淨 */
+.course-content > * {
+    min-height: 0;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease;
 }
 /* 展開狀態 */
 .course-content.active {
-    max-height: 800px;
-    width: 100%;
+    grid-template-rows: 1fr;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.course-content.active > * {
+    opacity: 1;
+    transition: opacity 0.2s ease 0.15s;
 }
 .course-content p{
     font-size: 1.1rem;
-    overflow: hidden;
+    text-align: baseline;
 }
 .Hackathon{
     background-color: rgba(0, 0, 0,0.2);
@@ -525,7 +536,7 @@ svg{
         width: fit-content;
     }
     .Hackathon{
-        padding:1.25rem 3rem;
+        padding:1.25rem 3rem 0 3rem;
         border: 0;
         border-top: 3px  solid var(--color-text-dark);
         border-bottom: 3px  solid var(--color-text-dark);

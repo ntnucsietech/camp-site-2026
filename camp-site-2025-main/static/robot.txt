@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://camp.ntnucsie.info/2026/sitemap.xml
